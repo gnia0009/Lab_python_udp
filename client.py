@@ -42,3 +42,20 @@ with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
 
     data, _ = s.recvfrom(1024)
     print("Réponse serveur :", data.decode("utf-8"))
+
+    data = b"ABC"
+print(data)
+print(data[0])
+print(chr(data[0]))
+
+data = bytearray(b"ABC")
+data[0] = 66
+print(bytes(data))
+
+data = b"ABCDEFG"
+print(data[0:3])
+print(data[3:])
+
+ba = bytearray(b"A")
+ba[0] ^= 0b00000001
+print(bytes(ba))
